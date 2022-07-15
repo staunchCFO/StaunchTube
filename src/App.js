@@ -3,8 +3,10 @@ import styled, { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home';
-import Menu from './Components/Menu'
+import Menu from './Components/Menu';
+import Video from './pages/Video';
 import Navbar from './Components/Navbar';
+import SignIn from './pages/Sigin';
 import { darkTheme, lightTheme } from './utils/Theme';
 
 const Container = styled.div`
@@ -37,10 +39,10 @@ function App() {
               <Routes>
                 <Route path="/">
                   <Route index element={<Home />} />
-                  {/* <Route path="signin" element={<SignIn />} />
+                  <Route path="signin" element={<SignIn />} />
                   <Route path="video">
                     <Route path=":id" element={<Video />} />
-                  </Route> */}
+                  </Route>
                 </Route>
               </Routes>
             </Wrapper>
